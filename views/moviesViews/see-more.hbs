@@ -1,0 +1,21 @@
+<div id="see-more">
+  <div id="see-more-img">
+    <img src="{{singleMovie.image}}" />
+  </div>
+  <div id="see-more-text">
+    <a href="/movies">Go back</a>
+    <h1>{{singleMovie.title}}</h1>
+    <h2>Director: {{singleMovie.director}}</h2>
+    <h3>Stars</h3>
+    <ul>
+      {{#each singleMovie.stars}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    <p>{{singleMovie.description}}</p>
+
+    {{#each singleMovie.showtimes}}
+      <span>{{this}} |</span>
+    {{/each}}
+  </div>
+</div>
